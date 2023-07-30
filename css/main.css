@@ -1,0 +1,13 @@
+.container__item-box {
+  position: relative;
+}
+
+.image {
+  width: 300px;
+  position: absolute;
+}
+
+.rectangle {
+  border: 1px solid red;
+  position: absolute;
+}
