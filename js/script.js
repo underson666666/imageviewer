@@ -52,6 +52,8 @@ function loaded() {
   const containerDom = document.querySelector(".image-set");
   containerDom.appendChild(imageSet)
 
-  const memoValue = document.getElementById("memo").value;
-  imageSet.appendChild(memoValue)
+  const memoDom = document.createElement("input")
+  memoDom.value = document.getElementById("memo").value;
+  memoDom.className = "memo";
+  imageSet.appendChild(memoDom)
 }
