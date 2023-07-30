@@ -1,6 +1,6 @@
 const drawButton = document.getElementById("draw");
 drawButton.addEventListener("click", function() {
-  console.log("entry");
+  console.log("clicked");
   const imageData = document.getElementById("imageData").value;
 
   const image = new Image();
@@ -15,16 +15,15 @@ function loaded() {
   const coordinatesStr = document.getElementById("coordinate").value;
   const coordinates = eval(coordinatesStr);
 
-  // const targetDom = document.getElementById("viewer");
-  const targetDom = document.createElement("div");
-  targetDom.className = "container__item-box"
+  const imageSet = document.createElement("div");
+  imageSet.className = "image-item"
 
   // 描画する横幅。.imageのcssのwidthと合わせる。
   const IMAGE_DOM_WIDTH = 300;
   const scaling = IMAGE_DOM_WIDTH / this.width;
   const imageWidth = this.width;
   this.className = "image";
-  targetDom.appendChild(this);
+  imageSet.appendChild(this);
 
   const COLORS = ["red", "blue", "#0f0"]
   let colorsCount = 0;
@@ -39,7 +38,7 @@ function loaded() {
       rectDom.style.top = coordinate[1] * scaling + "px";
       rectDom.style.width = (coordinate[2] * scaling) - (coordinate[0] * scaling) + "px";
       rectDom.style.height = (coordinate[3] * scaling) - (coordinate[1] * scaling) + "px";
-      targetDom.appendChild(rectDom)
+      imageSet.appendChild(rectDom)
 
       colorsCount++;
     }
@@ -50,6 +49,9 @@ function loaded() {
     // [[400, 125, 560, 350],[877, 136,1061, 270],[811, 877, 943, 1059]]
   }
 
-  const containerDom = document.querySelector(".container");
-  containerDom.appendChild(targetDom)
+  const containerDom = document.querySelector(".image-set");
+  containerDom.appendChild(imageSet)
+
+  const memoValue = document.getElementById("memo").value;
+  imageSet.appendChild(memoValue)
 }

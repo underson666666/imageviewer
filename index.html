@@ -9,15 +9,24 @@
     <div class="header"></div>
     <div class="content">
         <div class="condition">
-            <textarea id="imageData" class="base64image" name="" cols="30" rows="10" placeholder="base64 image here"></textarea>
-            <textarea id="coordinate" class="coordinate" name="" cols="30" rows="10" placeholder="rect info here. double array. [[x,x,y,y],[x,x,y,y]]"></textarea>
+            <div>
+                <textarea id="imageData" class="base64image" name="" cols="30" rows="10" placeholder="base64 image here"></textarea>
+            </div>
+            <div>
+                <input id="coordinate" class="coordinate" name="" cols="30" rows="10" placeholder="rect info here. double array. [[x,x,y,y],[x,x,y,y]]"></textarea>
+            <div><input type="text" id="memo"></div>
+            </div>
             <button id="draw">draw</button>
         </div>
+
         <div class="container">
-            <!-- <div id="viewer" class="container__item-box">                                                                                              -->
-            <!--     <span class="image" style="width:300px;height:300px;background-color:#666;"></span>                                                    -->
-            <!--     <div style="position: absolute; border: 2px solid red; left: 63.4146px; top: 19.5122px; width: 200px; height: 258.537px;"></div></div> -->
-            <!-- </div>                                                                                                                                     -->
+            <div class="image-set">
+                <!-- <div class="image-item">                                           -->
+                <!--     <img src="suzu.jpg" alt="画像">                              -->
+                <!--     <div class="rectangle" style="top: 100px; left: 150px;"></div> -->
+                <!--     <span>hogehoge</span>                                          -->
+                <!-- </div>                                                             -->
+            </div>
         </div>
 
     </div>
