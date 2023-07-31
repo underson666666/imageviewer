@@ -3,6 +3,16 @@ body {
   padding: 0;
 }
 
+.coordinate {
+  width: 490px;
+  margin: .1em 0;
+}
+
+.memo {
+  width: 490px;
+  margin: .1em 0;
+}
+
 .container {
   max-width: 1000px; /* コンテナの幅を適宜調整してください */
   margin: 0 auto;
@@ -32,8 +42,4 @@ img {
   height: 50px; /* 矩形の高さを調整したい場合は適宜変更してください */
   border: 3px solid red;
   opacity: 0.5; /* 矩形の透明度を調整したい場合は、0〜1の範囲で値を設定してください */
-}
-
-.memo {
-  width: 300px;
 }

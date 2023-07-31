@@ -5,6 +5,7 @@ drawButton.addEventListener("click", function() {
 
   const image = new Image();
   image.src = imageData;
+  // image.src = "data:image/jpeg;base64," + imageData;
   // 拡大縮小率を計算するために横幅を取得する必要があるが、
   // 画像を読み込み終わってからでないと読み込めないのでonloadイベントを設定する。
   image.onload = loaded;
