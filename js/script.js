@@ -4,8 +4,8 @@ drawButton.addEventListener("click", function() {
   const imageData = document.getElementById("imageData").value;
 
   const image = new Image();
-  image.src = imageData;
-  // image.src = "data:image/jpeg;base64," + imageData;
+  // image.src = imageData;
+  image.src = "data:image/jpeg;base64," + imageData;
   // 拡大縮小率を計算するために横幅を取得する必要があるが、
   // 画像を読み込み終わってからでないと読み込めないのでonloadイベントを設定する。
   image.onload = loaded;
@@ -17,9 +17,9 @@ function loaded() {
   const coordinates = eval(coordinatesStr);
 
   const imageSet = document.createElement("div");
-  imageSet.className = "image-item"
+  imageSet.className = "image-set__box"
 
-  // 描画する横幅。.imageのcssのwidthと合わせる。
+  // 描画する横幅。.image-set__boxのcssのwidthと合わせる。
   const IMAGE_DOM_WIDTH = 300;
   const scaling = IMAGE_DOM_WIDTH / this.width;
   const imageWidth = this.width;
@@ -32,7 +32,6 @@ function loaded() {
   if (coordinates) {
     for (const coordinate of coordinates) {
       const rectDom = document.createElement("div");
-      // rectDom.className = "rectangle"
       rectDom.style.position = "absolute"
       rectDom.style.border = "2px solid " + COLORS[colorsCount]
       rectDom.style.left = coordinate[0] * scaling + "px";
@@ -55,6 +54,6 @@ function loaded() {
 
   const memoDom = document.createElement("input")
   memoDom.value = document.getElementById("memo").value;
-  memoDom.className = "memo";
+  memoDom.className = "input-memo";
   imageSet.appendChild(memoDom)
 }

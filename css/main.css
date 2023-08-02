@@ -13,33 +13,28 @@ body {
   margin: .1em 0;
 }
 
+.input-memo {
+  width: 300px;
+  margin: .1em 0;
+}
+
 .container {
-  max-width: 1000px; /* コンテナの幅を適宜調整してください */
-  margin: 0 auto;
-  padding: 20px;
+  margin: 1em auto;
 }
 
 .image-set {
   display: flex;
   flex-wrap: wrap; /* FlexboxのWrap機能を有効にする */
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
-.image-item {
-  width: calc((100% - 4em) / 3); /* 3つのアイテム間に2emのマージンを開けるための計算 */
+.image-set__box {
+  width: 300px;
   position: relative;
-  margin-bottom: 2em; /* 下に2emのマージンを追加 */
+  margin: .2em;
 }
 
 img {
   max-width: 100%;
   display: block;
-}
-
-.rectangle {
-  position: absolute;
-  width: 50px; /* 矩形の幅を調整したい場合は適宜変更してください */
-  height: 50px; /* 矩形の高さを調整したい場合は適宜変更してください */
-  border: 3px solid red;
-  opacity: 0.5; /* 矩形の透明度を調整したい場合は、0〜1の範囲で値を設定してください */
 }
